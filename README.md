@@ -1,2 +1,2 @@
 # construccionSoftware
-Utilización de JavaScript, Unity y C++
+Practica de JavaScript, Unity y C++
