@@ -1,0 +1,30 @@
+### GET ALL CARDS
+GET http://localhost:3000/
+
+### GET CARD BY ID
+GET http://localhost:3000/54
+
+### CREATE A NEW CARD AND ADD TO JSON
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "id": 54,
+    "type": "atack",
+    "name": "Storm",
+    "value": "8",
+    "cost": 5
+}
+
+### DELETE ONE CARD
+DELETE http://localhost:3000/54
+
+### UPDATE A CARD
+PUT http://localhost:3000/54
+Content-Type: application/json
+
+{
+    "type": "atack",
+    "value": "3",
+    "cost": 5
+}

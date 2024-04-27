@@ -51,7 +51,6 @@ function validateCard (card) { /* Function to validate the card structure */
     }
 
     for (let field in expectedFields) {
-        console.log(field);
         if (card.hasOwnProperty(field) && typeof card[field] !== expectedFields[field]) {
             return false
         }
@@ -63,7 +62,7 @@ function validateCard (card) { /* Function to validate the card structure */
 app.get('/', (req, res) => {
     
     if (cards.length === 0 ){
-        return res.status(200).send("There is no cards in the list");
+        return res.status(200).json({ message: "There is no cards in the list" });
     } 
         
     res.status(200).json(cards);
@@ -71,10 +70,10 @@ app.get('/', (req, res) => {
 /* GET method to get a specific card by id */
 app.get('/:id', (req, res) => {
     
-    const id = Number(req.params.id);
+    const id = req.params.id;
     const card = cards.find(card => card.id == id);
     if (card  == undefined) {
-        return res.status(200).send("Card not found");
+        return res.status(200).json({ message:"Card not found" });
     }
         
     res.status(200).json(card);
@@ -83,26 +82,29 @@ app.get('/:id', (req, res) => {
 /* POST method to add a new card */
 app.post('/', (req, res) => {
 
+    const id = req.body.id;
+    const cardIndex = cards.findIndex(card => card.id == id);
     const result = validateCard(req.body);
     
-    if ( result ) {
+    if ( result && cardIndex == -1) {
         const card = req.body;
         cards.push(card);
-        return res.status(200).send("Card added succefully");
+        return res.status(200).json({ message:"Card added succefully" });
     }
-    res.status(200).send("Card NOT added due fails in syntaxis");
+    res.status(200).json({ message:"Card NOT added due fails in syntaxis" });
 })
 /* DELETE method to delete a card by id */
 app.delete('/:id', (req, res) => {
     const id = Number(req.params.id)
     const cardIndex = cards.findIndex(card => card.id == id);
-    cards.splice(cardIndex, 1);
     
     if ( cardIndex == -1 ) {
-        res.status(200).send("Card not found to delete");
+        return res.status(200).json({ message:"Card not found to delete" });
     }
     
-    res.status(200).send("Card deleted succefully");
+    cards.splice(cardIndex, 1);
+    res.status(200).json({ message:"Card deleted succefully" });
+
     
 })
 /* PUT method to update a card by id */
@@ -111,18 +113,16 @@ app.put('/:id', (req, res) => {
     const cardIndex = cards.findIndex(card => card.id == id);
     const up_elements = req.body;
     const result = validateCard(req.body);
-    console.log(result);
-    console.log(id);
 
     if ( cardIndex == -1 || !result ) {
-        return res.status(200).send("Card NOT available to update");
+        return res.status(200).json({ message:"Card NOT available to update" });
     }
 
     cards[cardIndex] = {
         ...cards[cardIndex],
         ...up_elements
     }  
-    res.status(200).send("Card updated succesfully")
+    res.status(200).json( {message:"Card updated succesfully"} )
 })
 /* Server configuration port */
 const PORT = process.env.port ?? 3000;
