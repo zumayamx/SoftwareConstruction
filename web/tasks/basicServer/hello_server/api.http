@@ -1,0 +1,17 @@
+### Send a GET request to the server
+GET http://localhost:3000/name
+
+### Send a GET request to the server
+GET http://localhost:3000/hello/Zumaya
+
+
+### Crate a new cart with post
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+    "name":"Fireball",
+    "mana_cost": 5,
+    "type": "damage",
+    "ammount": 7
+}
