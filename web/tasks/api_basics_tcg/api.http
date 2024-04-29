@@ -8,23 +8,31 @@ GET http://localhost:3000/54
 POST http://localhost:3000/
 Content-Type: application/json
 
+[
 {
     "id": 54,
     "type": "atack",
     "name": "Storm",
     "value": "8",
     "cost": 5
+}, {
+    "id": 55,
+    "type": "defense",
+    "name": "Shield",
+    "value": "2",
+    "cost": 3
 }
+]
 
 ### DELETE ONE CARD
 DELETE http://localhost:3000/54
 
 ### UPDATE A CARD
-PUT http://localhost:3000/54
+PUT http://localhost:3000/55
 Content-Type: application/json
 
 {
-    "type": "atack",
-    "value": "3",
-    "cost": 5
+    "type": "bootcamp",
+    "value": "6",
+    "cost": 9
 }

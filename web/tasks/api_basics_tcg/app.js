@@ -82,16 +82,24 @@ app.get('/:id', (req, res) => {
 /* POST method to add a new card */
 app.post('/', (req, res) => {
 
-    const id = req.body.id;
-    const cardIndex = cards.findIndex(card => card.id == id);
-    const result = validateCard(req.body);
-    
-    if ( result && cardIndex == -1) {
-        const card = req.body;
-        cards.push(card);
-        return res.status(200).json({ message:"Card added succefully" });
-    }
-    res.status(200).json({ message:"Card NOT added due fails in syntaxis" });
+    //const id = req.body.id;
+    const cardFromRequest = req.body;
+    let cardsAdded = 0;
+    let cardsNotAdded = 0;
+
+    cardFromRequest.forEach(card => {
+        const cardIndex = cards.findIndex(c => c.id == card.id);
+        const result = validateCard(card);
+
+        if ( result && cardIndex == -1) {
+            cards.push(card);
+            cardsAdded++;
+        }
+        else {
+            cardsNotAdded++;
+        }
+    })
+    res.status(200).json({ message: `Cards added: ${cardsAdded}, Cards NOT added: ${cardsNotAdded}` });
 })
 /* DELETE method to delete a card by id */
 app.delete('/:id', (req, res) => {
