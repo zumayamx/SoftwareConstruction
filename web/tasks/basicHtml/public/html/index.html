@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad HTML Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            color: black;
+        }
+        p {
+            font-size: 16px;
+            color: black;
+        }
+        .example {
+            background-color: #2987f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+ 
+<h2>a - Hyperlinks</h2>
+<p>Sirven para hacer un link de una página a otro recurso en la web, sea otro archivo en el servidor web, u otra página web.</p>
+<div class="example" id="Hyperlinks">
+    <p>Por ejemplo: <a href="https://www.netflix.com">El siguiente link nos lleva a Netflix!</a></p>
+    <p>Por ejemplo: <a href="#section">El siguiente link nos lleva al tag section!</a></p>
+</div>
+
+<h2>p - Paragraph</h2>
+<p>Define un párrafo de texto.</p>
+<div class="example" id="Paragraph">
+    <p>Este es un párrafo de ejemplo.</p>
+</div>
+
+<h2>h1, h2, ..., h6 - Headings</h2>
+<p>Define encabezados, siendo h1 el más grande y h6 el más pequeño.</p>
+<div class="example">
+    <h1>Este es un encabezado h1</h1>
+    <h2>Este es un encabezado h2</h2>
+    <h3>Este es un encabezado h3</h3>
+    <h4>Este es un encabezado h4</h4>
+    <h5>Este es un encabezado h5</h5>
+    <h6>Este es un encabezado h6</h6>
+</div>
+
+<h2>div - Division</h2>
+<p>Define una sección o división en un documento.</p>
+<div class="example" id="Division">
+    <div>Este es un parrafo dentro de un div como ejemplo</div>
+</div>
+
+<h2>span - Span</h2>
+<p>Define una sección en línea en un documento, utilizada para aplicar estilos a parte del texto.</p>
+<div class="example">
+    <p>Este es un texto con una <span style="color: red;">parte en rojo</span>.</p>
+</div>
+
+<h2>strong - Strong</h2>
+<p>Coloca un texto en negritas</p>
+<div class="example">
+    <p>Este es un texto <strong>importante</strong>.</p>
+</div>
+
+<h2>i - Italic</h2>
+<p>Coloca texto en cursiva.</p>
+<div class="example">
+    <p>Este es un texto en <i>cursiva</i>.</p>
+</div>
+
+<h2>u - Underline</h2>
+<p>Coloca texto subrayado.</p>
+<div class="example">
+    <p>Este es un texto <u>subrayado</u>.</p>
+</div>
+
+<h2>b - Bold</h2>
+<p>Coloca texto en negrita.</p>
+<div class="example">
+    <p>Este es un texto en <b>negrita</b>.</p>
+</div>
+
+<h2>strike - Strikethrough</h2>
+<p>Coloca texto tachado.</p>
+<div class="example">
+    <p>Este es un texto <strike>tachado</strike>.</p>
+</div>
+
+<h2>small - Small</h2>
+<p>Coloca texto pequeño.</p>
+<div class="example">
+    <p>Este es un texto en <small>tamaño pequeño</small>.</p>
+</div>
+
+<h2>em - Emphasis</h2>
+<p>Coloca texto enfatizado, generalmente mostrado en cursiva.</p>
+<div class="example">
+    <p>Este es un texto <em>enfatizado</em>.</p>
+</div>
+
+<h2>header - Header</h2>
+<p>Define el encabezado de una sección o página, generalmente se usa al principio.</p>
+<div class="example">
+    <header>Este es un header de ejemplo.</header>
+    <header>Bienvenido a mi página!</header>
+</div>
+
+<h2>section - Section</h2>
+<p>Define una sección en un documento.</p>
+<div class="example">
+    <section id="section">
+        <p> Este es un parrafo dentro de una sección</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi tenetur, 
+            minus nam necessitatibus odit deserunt! Quam est fugiat earum, dignissimos 
+            non dolorem doloribus quisquam molestiae. Aperiam fugit cupiditate placeat at!</p>
+    </section>
+</div>
+
+<h2>article - Article</h2>
+<p>Define contenido independiente y autónomo.</p>
+<div class="example">
+    <article>
+        <header>
+            <h2>Este es un article de ejemplo.</h2>
+          </header>
+          <p>Aquí es donde se incluye el contenido principal del artículo.</p>
+          <p>Puede incluir texto, imágenes, vídeos, tablas, etc.</p>
+    </article>
+</div>
+
+<h2>aside - Aside</h2>
+<p>Define contenido lateral, generalmente Información relacionada</p>
+<aside style="background-color: lightgray; padding: 20px;">
+    <h3>Este es un aside de ejemplo</h3>
+    <ul>
+    <li>Artículo 1</li>
+    <li>Artículo 2</li>
+    <li>Artículo 3</li>
+    </ul>
+</aside>
+
+<h2>nav - Navigation</h2>
+<p>Define una sección de navegación, hacía paginas principales o secciones importantes</p>
+<div class="example">
+    <nav>
+      <li><a href="#Hyperlinks"> Hyperlinks </a></li>
+      <li><a href="#Paragraph"> Paragraph </a></li>
+      <li><a href="#Division"> Division </a></li>
+    </nav>
+</div>
+
+<h2>img - Image</h2>
+<p>Define una imagen en el documento.</p>
+<div class="example">
+    <img src="../images/leclerc.png" alt="Imagen de ejemplo" height="600px" width="600x">
+</div>
+
+<h2>br - Line Break</h2>
+<p>Define un salto de línea.</p>
+<div class="example">
+    <p>Este es un texto con un salto de línea<br>aquí.</p>
+</div>
+
+<h2>hr - Horizontal Rule</h2>
+<p>Define una línea horizontal.</p>
+<div class="example">
+    <hr>
+</div>
+
+<h2>form - Form</h2>
+<p>Define un formulario HTML para la entrada de datos.</p>
+<div class="example">
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+    </form>
+</div>
+
+<h2>table - Table</h2>
+<p>Define una tabla de datos.</p>
+<div class="example">
+    <table border="3">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>25</td>
+        </tr>
+    </table>
+</div>
+
+<h2>ul - Unordered List</h2>
+<p>Define una lista desordenada.</p>
+<div class="example">
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+</div>
+
+<h2>ol - Ordered List</h2>
+<p>Define una lista ordenada.</p>
+<div class="example">
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+</div>
+
+<h2>footer - Footer</h2>
+<p>Define el pie de una sección o página.</p>
+<footer>
+    <p>Este es un ejemplo de píe de página</p>
+    <p>Derechos de autor 2024. Mi sitio web.</p>
+  </footer>
+</body>
+</html>

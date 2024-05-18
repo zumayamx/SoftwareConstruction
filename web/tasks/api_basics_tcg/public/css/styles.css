@@ -1,0 +1,51 @@
+
+html {
+    background-color: coral;
+}
+
+body {
+    background-color: pink;
+}
+
+h1 {
+    color: blue;
+    font-size: 30px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid black;
+}
+
+a {
+    margin-left: 15px;
+    padding: 10px;
+}
+
+#css_cheat_sheet{
+    background-color: greenyellow;
+    margin: 20px;
+    padding: 10px;
+    color: blue;
+    border-radius: 20px;
+}
+
+.div_style {
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#button_style {
+    background-color: yellow;
+}
+
+#button_style button {
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
