@@ -7,7 +7,9 @@
 
 "use strict"
 import express from "express";
+import fs from "fs";
 const app = express();
+app.use(express.static("public"));
 app.use(express.json()) /* Middleware to parse JSON data */
 let cards = [
     {
@@ -68,7 +70,7 @@ app.get('/', (req, res) => {
     res.status(200).json(cards);
 })
 /* GET method to get a specific card by id */
-app.get('/:id', (req, res) => {
+app.get('api/:id', (req, res) => {
     
     const id = req.params.id;
     const card = cards.find(card => card.id == id);
@@ -132,6 +134,12 @@ app.put('/:id', (req, res) => {
     }  
     res.status(200).json( {message:"Card updated succesfully"} )
 })
+
+app.get('/web', (req, res) => {
+    const file = fs.readFileSync("public/html/index.html", "utf-8"); //sicrono para que vea la pagina primero antes que nada
+    res.status(200).send(file);
+})
+
 /* Server configuration port */
 const PORT = process.env.port ?? 3000;
 app.listen(PORT, () => {
