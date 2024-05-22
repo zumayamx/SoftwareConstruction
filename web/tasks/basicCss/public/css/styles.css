@@ -1,0 +1,153 @@
+.property-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: white;
+}
+.property-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 10px;
+}
+.property-description {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 10px;
+}
+.property-example {
+    margin-bottom: 10px;
+}
+.border-example {
+    border: 2px solid red;
+}
+.border-left-example {
+    border-left: 3px solid green;
+}
+.border-right-example {
+    border-right: 3px solid blue;
+}
+.border-top-example {
+    border-top: 3px solid orange;
+}
+.border-bottom-example {
+    border-bottom: 3px solid purple;
+}
+.border-radius-example {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.background-image-example {
+    color: yellow;
+    background-image: url('../images/verstappen.png');
+    width: 300px;
+    height: 250px;
+}
+.color-example {
+    color: red;
+}
+.font-example {
+    font: bold italic large serif;
+}
+.font-family-example {
+    font-family: 'Courier New', Courier, monospace;
+}
+.font-style-example {
+    font-style: oblique;
+}
+.font-weight-example {
+    font-weight: bold;
+}
+.width-example {
+    width: 200px;
+}
+#imageWidth {
+    width: 800px;
+    height: 10px;
+}
+.height-example {
+    height: 400px;
+}
+
+#imageHeight {
+    height: 400px;
+    width: 5px;
+}
+
+.list-style-example {
+    list-style: square inside;
+}
+.margin-example {
+    margin: 100px;
+}
+.padding-example {
+    padding: 50px;
+}
+.overflow-example {
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+.display-example {
+    display: none;
+}
+.position-example {
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+#verstappen {
+    width: 450px;
+    height: 450px;
+    filter: blur(5px) grayscale(100%);
+}
+
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: purple;
+    color: white;
+  }
+  
+  #two {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: blue;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.inline-example {
+    display: inline;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.block-example {
+    display: block;
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.flex-item {
+    border: 1px solid green;
+    padding: 10px;
+    margin: 5px;
+}
+
+.none-example {
+    display: none;
+}
+  
